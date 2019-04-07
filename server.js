@@ -1,8 +1,9 @@
 const express = require('express');
-const mysql = require('mysql');
 const bodyParser = require('body-parser');
 
 app = express();
+app.use(express.json());
+
 port = process.env.PORT || 3000;
 
 app.listen(port);

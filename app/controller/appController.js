@@ -14,6 +14,7 @@ exports.list_all_tasks = function (req, res) {
 
 exports.create_a_task = function (req, res) {
     var new_task = new Task(req.body);
+    // console.log(req.body);
 
     if (!new_task.task || !new_task.status) {
         res.status(400).send({error: true, message: 'Please provide task/status!'});
@@ -25,7 +26,7 @@ exports.create_a_task = function (req, res) {
 
             res.json(task);
         });
-    }
+    };
 };
 
 exports.read_a_task = function (req, res) {
@@ -47,7 +48,7 @@ exports.update_a_task = function (req, res) {
 };
 
 exports.delete_a_task = function (req, res) {
-    Task.remove(req.params.taskId, function (err, task) {
+    Task.remove(req.params.taskId, function (err) {
         if (err)
             res.send(err);
 

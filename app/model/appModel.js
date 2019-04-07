@@ -8,8 +8,8 @@ var Task = function (task) {
     this.created_at = new Date();
 };
 
-Task.createTask = function (newTask, result) {
-    sql.query("INSERT INTO TASKS SET ?", newTask, function (err, res) {
+Task.createTask = function (task, result) {
+    sql.query("INSERT INTO TASKS (TASK, STATUS) VALUES (?,?)", [task.task, task.status], function (err, res) {
         if (err) {
             console.log('error', err);
             result(err, null);
