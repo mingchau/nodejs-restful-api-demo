@@ -1,13 +1,13 @@
-使用NodeJS构建一个简单的RESTful API.
+使用Node JS构建一个简单的RESTful API.
 
-##### 依赖环境
+#### 依赖环境
 ```
 express
 mysql
 body-parser
 ```
 
-##### 使用方式
+#### 使用方式
 - 创建MySQL数据库`mydb`，表`tasks`，并添加初始数据：
     ```sql
     CREATE DATABASE mydb;
@@ -28,34 +28,35 @@ body-parser
     (4, 'Refactor Code', 1, '2016-04-10 23:50:40'),
     (5, 'Push to prod', 1, '2016-04-10 23:50:50');
     ```
-- git clone项目代码 `https://github.com/mingchau/nodejs-restful-api-demo`
+- 获取项目代码 `git clone https://github.com/mingchau/nodejs-restful-api-demo`
 - 切换到项目目录`cd nodejs-restful-api-demo`，安装依赖环境 `npm install`
-- 使用`node server.js`启动项目
+- 使用`node server.js`启动
 
-##### 实现的HTTP方法
-- GET `/tasks` 获取所有的tasks；`/task/id` 根据id获取task
+#### 实现的HTTP方法
+- GET `/tasks` 获取所有的tasks；`/tasks/id` 根据id获取task
 - POST 添加一个task
 - PUT  更新一个task
 - DELETE 删除一个task
 
 
-##### 代码结构
-```
-│  package-lock.json 
-│  package.json 第三方包的依赖关系
-│  README.md 文档
-│  server.js 服务入口
-├─app
-│  ├─controller
-│  │      appController.js 负责把route转发到model
-│  ├─model
-│  │      appModel.js 数据操作
-│  │      db.js 数据库配置
-│  └─routes
-│          appRoutes.js 路由文件
-├─node_modules 第三方依赖包
-```
+#### 代码结构
+
+    ```
+    │  package-lock.json 
+    │  package.json 第三方包的依赖关系
+    │  README.md 文档
+    │  server.js 服务入口
+    ├─app
+    │  ├─controller
+    │  │      appController.js 路由处理函数
+    │  ├─model
+    │  │      appModel.js 数据操作
+    │  │      db.js 数据库配置
+    │  └─routes
+    │          appRoutes.js 路由规则文件
+    ├─node_modules 第三方依赖包
+    ```
 
 
-##### 参考
+#### 参考
 https://www.codementor.io/julieisip/learn-rest-api-using-express-js-and-mysql-db-ldflyx8g2
