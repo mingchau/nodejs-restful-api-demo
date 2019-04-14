@@ -26,7 +26,7 @@ exports.create_a_task = function (req, res) {
 
             res.json(task);
         });
-    };
+    }
 };
 
 exports.read_a_task = function (req, res) {
