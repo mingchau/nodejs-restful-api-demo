@@ -32,6 +32,13 @@ body-parser
 - 切换到项目目录`cd nodejs-restful-api-demo`，安装依赖环境 `npm install`
 - 使用`node server.js`启动项目
 
+##### 实现的HTTP方法
+- GET `/tasks` 获取所有的tasks；`/task/id` 根据id获取task
+- POST 添加一个task
+- PUT  更新一个task
+- DELETE 删除一个task
+
+
 ##### 代码结构
 ```
 │  package-lock.json 
@@ -40,7 +47,7 @@ body-parser
 │  server.js 服务入口
 ├─app
 │  ├─controller
-│  │      appController.js 负责把route转发到controller
+│  │      appController.js 负责把route转发到model
 │  ├─model
 │  │      appModel.js 数据操作
 │  │      db.js 数据库配置
