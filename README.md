@@ -41,21 +41,21 @@ body-parser
 
 #### 代码结构
 
-    ```
-    │  package-lock.json 
-    │  package.json 第三方包的依赖关系
-    │  README.md 文档
-    │  server.js 服务入口
-    ├─app
-    │  ├─controller
-    │  │      appController.js 路由处理函数
-    │  ├─model
-    │  │      appModel.js 数据操作
-    │  │      db.js 数据库配置
-    │  └─routes
-    │          appRoutes.js 路由规则文件
-    ├─node_modules 第三方依赖包
-    ```
+```
+│  package-lock.json 
+│  package.json 第三方包的依赖关系
+│  README.md 文档
+│  server.js 服务入口
+├─app
+│  ├─controller
+│  │      appController.js 路由处理函数
+│  ├─model
+│  │      appModel.js 数据操作
+│  │      db.js 数据库配置
+│  └─routes
+│          appRoutes.js 路由规则文件
+├─node_modules 第三方依赖包
+```
 
 
 #### 参考
